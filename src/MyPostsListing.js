@@ -8,7 +8,7 @@ function MyPostsListing(props){
     useEffect(() => {
         const username = props.username;
         
-        axios.get('http://localhost:4000/userposts' , 
+        axios.get('https://chai-stop-server.herokuapp.com/userposts' , 
               {
                 params: {
                   username: username

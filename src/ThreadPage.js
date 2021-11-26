@@ -13,7 +13,7 @@ function ThreadPage(){
     const [post, setPost] = useState({});
     useEffect(() =>{
 
-        axios.get('http://localhost:4000/postthread/' + id)
+        axios.get('https://chai-stop-server.herokuapp.com/postthread/' + id)
         .then(response => setPost(response.data));
 
         console.log( post.author);

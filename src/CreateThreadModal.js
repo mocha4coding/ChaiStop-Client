@@ -31,7 +31,7 @@ function CreateThreadModal(){
     //triggered when post button is hit. The contents of the thread are saved into database.
     function createThread(){
         const data = {title, body};
-        axios.post('http://localhost:4000/postthread', data, {withCredentials : true})
+        axios.post('https://chai-stop-server.herokuapp.com/postthread', data, {withCredentials : true})
             .then(response => {
                
                 setNewPostId(response.data._id);

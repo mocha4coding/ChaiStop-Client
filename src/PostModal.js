@@ -23,7 +23,7 @@ function PostModal(props)
     const visibleClass = props.open ? 'block' : 'hidden';
 
     function refreshComments(){
-        axios.get('http://localhost:4000/comments/root/' + props.id)
+        axios.get('https://chai-stop-server.herokuapp.com/comments/root/' + props.id)
         .then(response => {
             setComments(response.data);
             
@@ -34,7 +34,7 @@ function PostModal(props)
 
     useEffect(() => {
 
-        axios.get('http://localhost:4000/postthread/' + props.id)
+        axios.get('https://chai-stop-server.herokuapp.com/postthread/' + props.id)
         .then(response => {
             setPost(response.data);
             
