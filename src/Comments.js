@@ -3,7 +3,7 @@ import { ChatAltIcon } from "@heroicons/react/solid";
 import { useState , useContext} from 'react';
 import CommentForm from './CommentForm';
 import RootCommentContext from './RootCommentContext';
-import Voting from './Voting';
+
 
 function Comments(props) {
 
