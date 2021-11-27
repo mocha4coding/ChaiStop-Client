@@ -44,30 +44,30 @@ The entire project is live hosted [https://chai-stop.herokuapp.com/](https://cha
 # Project Structure
 
 ### Components involved in authentication:
-AuthModal.js : Handles the authentication box that pops up on clicking login/sign up button in header and also in other instances.
-AuthModalContext.js
+* AuthModal.js : Handles the authentication box that pops up on clicking login/sign up button in header and also in other instances.
+* AuthModalContext.js
 
 
 ### Components involved in thread creation:
-PostThread.js : The Post thread bar in forum dashboard which on click triggers the createThreadModal
-CreateThreadModal.js : Handles the thread creation pop up
-CreateThreadModalContext.js
+* PostThread.js : The Post thread bar in forum dashboard which on click triggers the createThreadModal
+* CreateThreadModal.js : Handles the thread creation pop up
+* CreateThreadModalContext.js
 
 ### Components involved in displaying posts(threads)
-PostModal.js : As a pop up 
-PostsListing.js : Lists the posts in popup and in homepage [after logging in].
-PostContent.js : Displays the post body contents (author, title, thread body, post creation timing)
-ThreadContent.js : Handles how the post will be displayed when in pop up and when opened seperately in a new tab.
-ThreadPage.js : Involved in displaying thread contents when opened seprately in a new tab and not as a pop up.
-SavedPosts.js : Can be accessed only when the user is logged in. Handles the posts saved by user.
-SavedPostsListing.js : Lists the posts saved by the user
-MyPosts.js : Can be accessed only when the user is logged in. Handles the posts written by user.
-MyPostsListing.js: Lists the posts written by the user
+* PostModal.js : As a pop up 
+* PostsListing.js : Lists the posts in popup and in homepage [after logging in].
+* PostContent.js : Displays the post body contents (author, title, thread body, post creation timing)
+* ThreadContent.js : Handles how the post will be displayed when in pop up and when opened seperately in a new tab.
+* ThreadPage.js : Involved in displaying thread contents when opened seprately in a new tab and not as a pop up.
+* SavedPosts.js : Can be accessed only when the user is logged in. Handles the posts saved by user.
+* SavedPostsListing.js : Lists the posts saved by the user
+* MyPosts.js : Can be accessed only when the user is logged in. Handles the posts written by user.
+* MyPostsListing.js: Lists the posts written by the user
 
 ### Components responsible for commenting and threading in comments section
-Comment.js : Renders each comment
-Comments.js : Renders the string of comments, the threading of comments.
-CommentForm.js : For composing the comment.
+* Comment.js : Renders each comment
+* Comments.js : Renders the string of comments, the threading of comments.
+* CommentForm.js : For composing the comment.
 
 
 
