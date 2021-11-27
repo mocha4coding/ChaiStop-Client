@@ -1,21 +1,21 @@
 ![Slide1](https://user-images.githubusercontent.com/48448060/143718690-2c27d066-6470-41e1-88d5-8e0187f2635b.JPG)
 
 
-#Contents
+# Contents
 1. About the project
 2. Project Links
 3. Features
 4. Project Structure
 
 
-#About the project
+# About the project
 I built this as project as my entry for Microsoft Engage FTE-2021. This is basically an online community for students. During the pandemic, the one thing we miss is hanging out with friends at chai-stalls where we used to have countless discussions on literally anything related to our college life , be it a college fest, normal academic doubts or may be just getting to know our batchmates . We all had our favourite chai-stalls close to our campuses. It is not possible to replicate those moments we create in a real life chai-stop virtually. But this community can act as an equally favorite socializing hub in the digital world.
 
-#Project Links
+# Project Links
 This repo is the frontend code of the project. You can access the backend code [here](https://github.com/mocha4coding/ChaiStop-server).
 The entire project is live hosted [https://chai-stop.herokuapp.com/](https://chai-stop.herokuapp.com/). The website is not fully responsive yet. Hence please avoid accessing the website on small screens. You can watch the demo video of the project [here](https://drive.google.com/file/d/1Mf4VL4bycc4LKFekrYYhKHkAq6AseYRh/view?usp=sharing). 
 
-#Features
+# Features
 
 ![Slide2](https://user-images.githubusercontent.com/48448060/143718720-5e7d017e-c951-4453-af3b-daff2bbec159.JPG)
 ![Slide3](https://user-images.githubusercontent.com/48448060/143718722-c9b3901d-fbf3-40e1-9779-06b6394b7b46.JPG)
@@ -41,19 +41,19 @@ The entire project is live hosted [https://chai-stop.herokuapp.com/](https://cha
 ![Slide23](https://user-images.githubusercontent.com/48448060/143718749-27b0b3c4-f83e-46b7-87e4-f33036edd021.JPG)
 ![Slide24](https://user-images.githubusercontent.com/48448060/143718750-998e4aa5-af5d-4e28-ac1a-48fbac17928b.JPG)
 
-#Project Structure
+# Project Structure
 
-###Components involved in authentication:
+### Components involved in authentication:
 AuthModal.js : Handles the authentication box that pops up on clicking login/sign up button in header and also in other instances.
 AuthModalContext.js
 
 
-###Components involved in thread creation:
+### Components involved in thread creation:
 PostThread.js : The Post thread bar in forum dashboard which on click triggers the createThreadModal
 CreateThreadModal.js : Handles the thread creation pop up
 CreateThreadModalContext.js
 
-###Components involved in displaying posts(threads)
+### Components involved in displaying posts(threads)
 PostModal.js : As a pop up 
 PostsListing.js : Lists the posts in popup and in homepage [after logging in].
 PostContent.js : Displays the post body contents (author, title, thread body, post creation timing)
@@ -64,7 +64,7 @@ SavedPostsListing.js : Lists the posts saved by the user
 MyPosts.js : Can be accessed only when the user is logged in. Handles the posts written by user.
 MyPostsListing.js: Lists the posts written by the user
 
-###Components responsible for commenting and threading in comments section
+### Components responsible for commenting and threading in comments section
 Comment.js : Renders each comment
 Comments.js : Renders the string of comments, the threading of comments.
 CommentForm.js : For composing the comment.
