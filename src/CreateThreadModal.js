@@ -43,7 +43,7 @@ function CreateThreadModal(){
             });
     }
 
-
+    //if a new post is created we rediect to its url
     if(newPostId){
         return (<Redirect to = {'/posts/' + newPostId} />);
         
@@ -65,6 +65,8 @@ function CreateThreadModal(){
                             </button>
                         </div>
 
+
+                        {/* Thread title */}
                         <h1 className = "text-2xl mb-3" >Create a post:</h1>
                         <input 
                             className = {"border-2  w-full border-theme_dark-brighter bg-theme_brighter rounded-md p-2 my-2 block "} 
@@ -73,12 +75,16 @@ function CreateThreadModal(){
                             onChange = {e => setTitle(e.target.value)}
                         />
 
+
+                        {/* Thread Body */}
                         <ThreadTextEditor 
                             value = {body}
                             onChange = {e => setBody(e.target.value)}
                             placeholder = {'Thread Contents(required)'}
                         />
 
+
+                        {/* Cancel and post buttons */}
                         <div className = {'text-right'}>
                             
                             <AuthButton outline className = {'mr-1'} 

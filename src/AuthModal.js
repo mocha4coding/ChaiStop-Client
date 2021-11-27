@@ -7,15 +7,20 @@ import ClickOutHandler from 'react-clickout-handler';
 import UserContext from "./UserContext";
 
 function AuthModal(props){
+
+    //states
     const [modalType, setModalType] = useState('login');
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-
-    
+    const [password, setPassword] = useState('');    
     const [errorBody, setErrorBody] = useState('')
+
+    //contexts
     const modalContext = useContext(AuthModalContext);
     const user = useContext(UserContext);
+
+
+
 
     const visibleClass = modalContext.show !== false ? 'block' : 'hidden';
 
@@ -73,9 +78,11 @@ function AuthModal(props){
            
                 <div className = "w-4/5 sm:w-1/3  border border-theme_dark rounded-md bg-white p-5 text-theme_dark  mx-auto self-center align-middle">
 
-                
-                        <div className = ""><span className = "text-red-700">{errorBody}</span></div>
+                        {/* Error message if there is any authentication error */}
+                    <div className = ""><span className = "text-red-700">{errorBody}</span></div>
                
+
+
                 {modalType === 'login' && (
                 
                     <div>
@@ -112,6 +119,9 @@ function AuthModal(props){
                         </div>
                     </div>)
                 }
+
+
+                
                 {modalType === 'register' && (
                 
                     <div>

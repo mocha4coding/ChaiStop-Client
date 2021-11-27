@@ -9,10 +9,10 @@ import axios from "axios";
 
 function Comment(props){
 
+    //states
     const [post, setPost] = useState({});
     const [comments, setComments] = useState([]);
-    const [commentsTotals, setCommentsTotals] = useState(null);
-    const [userVotes, setUserVotes] = useState(null);
+   
 
 
     function refreshComments(){
@@ -25,16 +25,7 @@ function Comment(props){
        
     };
 
-    // function refreshVotes(){
-    //     const commentsIds = [post._id, ...comments.map(c => c._id) ];
-    //     axios.post('https://chaiserver.herokuapp.com/votes', {postsIds: commentsIds}, {withCredentials: true})
-    //         .then(response => {
-    //             setCommentsTotals(response.data.postsTotals);
-    //             setUserVotes(response.data.userVotes);
-    //         })
-
-    // }
-
+ 
     useEffect(() => {
 
         if(props.comment){
@@ -58,25 +49,6 @@ function Comment(props){
 
 
 
-    // axios.get('https://chaiserver.herokuapp.com/postthread/' + props.id)
-    // .then(response => {
-    //     setPost(response.data);
-        
-        
-    // });
-
-    // refreshComments();
-
-
-
-
-
-
-
-
-    // useEffect(() => {
-    //     refreshVotes();
-    // }, [comments.length]);
     return(
     
     <div className = "bg-theme_dark-alternateBright">
@@ -86,6 +58,8 @@ function Comment(props){
            )}
          {!!post && !!post._id && (
                             <>
+
+                            {/* Comment form to post new comments */}
                             <hr className = "border-theme_dark-alternateBright my-4"/>
                             <CommentForm onSubmit = {() => refreshComments()}
                                          rootId = {post._id} 
@@ -93,10 +67,17 @@ function Comment(props){
                                          showAuthor = {true}/>
 
 
+                            
 
+
+                            {/* Replies of comments to comments or the main post. This portion is respondible for rendedring the threading.
+                                Each comment has a parent id and a root id. The parent id is the comment/post to which it is a reply. Root_id is 
+                                the original post.
+                            
+                            */}
                             <hr className = "border-theme_dark-brighter my-4"/>
                             {/* <RootCommentContext.Provider value = {{refreshComments, refreshVotes, commentsTotals,userVotes}}> */}
-                            
+                                               
                             <div className = "theme_dark-alternateBright">
                             <RootCommentContext.Provider value = {{refreshComments}}>
                                 <Comments parentId = {post._id} 

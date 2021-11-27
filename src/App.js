@@ -58,26 +58,15 @@ function App() {
 
   return (
     <div className = "">
-    <AuthModalContext.Provider value = {{show: showAuthModal, setShow: setShowAuthModal}}>
+      {/* To pop up auth modal if user tries to post/comment without loggin in */}
+    <AuthModalContext.Provider value = {{show: showAuthModal, setShow: setShowAuthModal}}> 
+
      <CreateThreadModalContext.Provider value = {{show: showCreateThreadModal, setShow: setShowCreateThreadModal}}>
+      
+      {/* To pass details of user  */}
       <UserContext.Provider value = {{...user, logout, setUser}}>  
-        
-        {/* <Router>
-        <Header/>  
-          <Routes>
-            <Route exact path = "/" element = {<SubForum/>}/> 
-            <Route exact path = {"/posts/:id"} element = {<ThreadPage/>}/> 
-          </Routes>
-        </Router>  */}
-        <Routing/>
-        
-        
-        {/* <PostsListing/> */}
-        
-        
-        
-        
-       
+      
+        <Routing/>   
 
         
       </UserContext.Provider>

@@ -31,7 +31,9 @@ function CommentForm(props){
     <div>
         {
             props.showAuthor && (
-                <p className = {'text-theme_dark-brighter text-sm mb-2'}> Comment as :<span class = "text-theme_border opacity-50 font-bold text-sm">{user.username} </span></p>
+                <p className = {'text-theme_dark-brighter text-sm mb-2'}> 
+                    Comment as :<span class = "text-theme_border opacity-50 font-bold text-sm">{user.username} </span>
+                </p>
             )
         }
         

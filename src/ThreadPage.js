@@ -17,30 +17,29 @@ function ThreadPage(){
         .then(response => setPost(response.data));
 
         console.log( post.author);
-    },[]);
+    },[id]);
 
     
     // w-screen h-screen relative fixed top-0 bottom-0 left-0
     return(
         <>
         <div className = "bg-theme_dark-alternateBright w-screen relative fixed top-0 bottom-0 left-0 p-11">
-           {/* {post && (
-               <Thread {...post} open={true}/>
-                   
-           )} */}
+          
            <div className = "flex">
 
-                
+                {/* The comment form and comment listings  */}
                 <div className = " bg-theme_dark-alternateBright flex-1">
                      <Comment id = {id}/>
                 </div>
+
+                {/* The about author section */}
                 <div className = "max-w-xl">
                     <AboutAuthor author = {post.author}/>
                 </div>
            </div>
            
         </div>
-        {/* <div className = "bg-theme_dark-brighter w-screen h-screen bottom-0 left-0 p-11"></div> */}
+       
         </>
     );
 }

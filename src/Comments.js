@@ -45,6 +45,7 @@ function Comments(props) {
                                 </button>
                             </div>
                             {
+                                //rendering the threading
                                 comment._id === showCommentForm && (
                                     <CommentForm 
                                                 showAuthor = {false}
