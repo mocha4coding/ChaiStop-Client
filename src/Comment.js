@@ -16,7 +16,7 @@ function Comment(props){
 
 
     function refreshComments(){
-        axios.get('https://chai-stop-server.herokuapp.com/comments/root/' + props.id)
+        axios.get('https://chai-stop.herokuapp.com/comments/root/' + props.id)
         .then(response => {
             setComments(response.data);
           
@@ -27,7 +27,7 @@ function Comment(props){
 
     // function refreshVotes(){
     //     const commentsIds = [post._id, ...comments.map(c => c._id) ];
-    //     axios.post('https://chai-stop-server.herokuapp.com/votes', {postsIds: commentsIds}, {withCredentials: true})
+    //     axios.post('https://chai-stop.herokuapp.com/votes', {postsIds: commentsIds}, {withCredentials: true})
     //         .then(response => {
     //             setCommentsTotals(response.data.postsTotals);
     //             setUserVotes(response.data.userVotes);
@@ -41,7 +41,7 @@ function Comment(props){
             setPost(props.post);
         }
         else{
-            axios.get('https://chai-stop-server.herokuapp.com/postthread/' + props.id)
+            axios.get('https://chai-stop.herokuapp.com/postthread/' + props.id)
             .then(response => {
                 setPost(response.data);
                 
@@ -58,7 +58,7 @@ function Comment(props){
 
 
 
-    // axios.get('https://chai-stop-server.herokuapp.com/postthread/' + props.id)
+    // axios.get('https://chai-stop.herokuapp.com/postthread/' + props.id)
     // .then(response => {
     //     setPost(response.data);
         

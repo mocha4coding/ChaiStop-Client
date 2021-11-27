@@ -8,7 +8,7 @@ function SavedPostsListing(props){
     useEffect(() => {
         const username = props.username;
         
-        axios.get('https://chai-stop-server.herokuapp.com/savedpost' ,{
+        axios.get('https://chai-stop.herokuapp.com/savedpost' ,{
                  params: {
                         username: username
                               }

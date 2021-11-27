@@ -15,7 +15,7 @@ function CommentForm(props){
     function postComment(e){
         e.preventDefault();
         const data = {body:CommentBody, parentId:props.parentId, rootId:props.rootId};
-        axios.post("https://chai-stop-server.herokuapp.com/postcomment", data,{withCredentials: true} )
+        axios.post("https://chai-stop.herokuapp.com/postcomment", data,{withCredentials: true} )
         .then(response => {
             setCommentBody('');
             if(props.onSubmit){

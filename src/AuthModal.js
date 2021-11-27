@@ -33,7 +33,8 @@ function AuthModal(props){
         }
         else
         {
-        axios.post('https://chai-stop-server.herokuapp.com/register', data, {withCredentials:true})
+            console.log('about to make axios call');
+        axios.post('https://chai-stop.herokuapp.com/register', data, {withCredentials:true})
         .then((response) => {
             
            
@@ -45,7 +46,7 @@ function AuthModal(props){
           })
           .catch((error) =>{
             
-             setErrorBody('Username already exists.Try a different one.');
+             setErrorBody('Username already exists. ');
           });
         }
     }
@@ -53,7 +54,7 @@ function AuthModal(props){
     function login() {
         
         const data = {username,password};
-        axios.post('https://chai-stop-server.herokuapp.com/login', data, {withCredentials:true})
+        axios.post('https://chai-stop.herokuapp.com/login', data, {withCredentials:true})
         .then(() => {
             modalContext.setShow(false);
             user.setUser({username})

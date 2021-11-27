@@ -22,7 +22,7 @@ function HomePage()
                                 <div>
 
                                     <h1 className = "text-theme_dark-highlight text-5xl font-bold mt-2">Hello there!</h1>
-                                    <h2 className = "text-theme_border mt-2"> Welcome to ForumName!!</h2>
+                                    <h2 className = "text-theme_border mt-2"> Welcome to ChaiStop!!</h2>
                                     <p className = "text-2xl text-theme_border-bright mt-16"> Click the button below to get started!</p>
                                     <AuthButton className = "mt-7 flex" onClick = {() => authModal.setShow('register')}>
                                         Get Started
