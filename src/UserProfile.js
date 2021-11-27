@@ -32,7 +32,7 @@ function UserProfile(props)
     useEffect(() => {
        
         
-        axios.get('https://chai-stop-server.herokuapp.com/profile', {withCredentials:true})
+        axios.get('https://chaiserver.herokuapp.com/profile', {withCredentials:true})
              .then((response) => {
                 console.log(response.data);
                 setBiography(response.data.biography);
@@ -56,7 +56,7 @@ function UserProfile(props)
         console.log('updated ' + department);
         console.log('updated ' + biography);
         const data = {name, email, school, department,biography, username};
-        axios.put('https://chai-stop-server.herokuapp.com/update', data, {withCredentials:true})
+        axios.put('https://chaiserver.herokuapp.com/update', data, {withCredentials:true})
         .then(() => {
 
             setMessageBody('Your profile has been updated successfully');

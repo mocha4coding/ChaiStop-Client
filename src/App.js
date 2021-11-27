@@ -33,10 +33,10 @@ function App() {
   // const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    axios.get('https://chai-stop-server.herokuapp.com/user', {withCredentials:true})
+    axios.get('https://chaiserver.herokuapp.com/user', {withCredentials:true})
     .then(response => setUser(response.data));
 
-    // axios.get('https://chai-stop-server.herokuapp.com/postthread', {withCredentials:true})
+    // axios.get('https://chaiserver.herokuapp.com/postthread', {withCredentials:true})
     // .then(response => setPosts(response.data));
 
   }, []);
@@ -44,7 +44,7 @@ function App() {
 
 
   function logout(){
-    axios.post('https://chai-stop-server.herokuapp.com/logout', {}, {withCredentials: true})
+    axios.post('https://chaiserver.herokuapp.com/logout', {}, {withCredentials: true})
     .then(() =>{
           setUser({});
           <Redirect to = "/"/>       

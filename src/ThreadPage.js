@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import {useState, useEffect} from 'react';
 
 import axios from 'axios';
-import Thread from './Thread';
+
 import Comment from './Comment';
 import AboutAuthor from './AboutAuthor';
 function ThreadPage(){
@@ -13,7 +13,7 @@ function ThreadPage(){
     const [post, setPost] = useState({});
     useEffect(() =>{
 
-        axios.get('https://chai-stop-server.herokuapp.com/postthread/' + id)
+        axios.get('https://chaiserver.herokuapp.com/postthread/' + id)
         .then(response => setPost(response.data));
 
         console.log( post.author);
