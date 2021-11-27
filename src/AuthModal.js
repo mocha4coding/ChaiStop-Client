@@ -34,7 +34,7 @@ function AuthModal(props){
         else
         {
             console.log('about to make axios call');
-        axios.post('https://chai-stop.herokuapp.com/register', data, {withCredentials:true})
+        axios.post('https://chai-stop-server.herokuapp.com/register', data, {withCredentials:true})
         .then((response) => {
             
            
@@ -54,7 +54,7 @@ function AuthModal(props){
     function login() {
         
         const data = {username,password};
-        axios.post('https://chai-stop.herokuapp.com/login', data, {withCredentials:true})
+        axios.post('https://chai-stop-server.herokuapp.com/login', data, {withCredentials:true})
         .then(() => {
             modalContext.setShow(false);
             user.setUser({username})

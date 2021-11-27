@@ -21,7 +21,7 @@ function AboutAuthor(props)
     useEffect(() => {
        
         console.log(username);
-        axios.get('https://chai-stop.herokuapp.com/author' ,{
+        axios.get('https://chai-stop-server.herokuapp.com/author' ,{
                  params: {
                         username: username
                               }

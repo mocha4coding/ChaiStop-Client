@@ -11,7 +11,7 @@ function PostContent(props)
   {
       console.log(props);
       const data = {postId: props._id, username : user.username};
-      axios.post('https://chai-stop.herokuapp.com/bookmarks', data, {withCredentials:true})
+      axios.post('https://chai-stop-server.herokuapp.com/bookmarks', data, {withCredentials:true})
       .then(() => {
         // user.setUser({username});
         // user.setEmail({email});

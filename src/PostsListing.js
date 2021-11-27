@@ -7,7 +7,7 @@ function PostsListing(){
     const [posts, setPosts] = useState([]);
     useEffect(() => {
            
-        axios.get('https://chai-stop.herokuapp.com/postthread', {withCredentials:true})
+        axios.get('https://chai-stop-server.herokuapp.com/postthread', {withCredentials:true})
         .then(response => setPosts(response.data));
     
       }, []);
