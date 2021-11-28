@@ -13,7 +13,7 @@ I built this as project as my entry for Microsoft Engage FTE-2021. This is basic
 
 # Project Links
 This repo is the frontend code of the project. You can access the backend code [here](https://github.com/mocha4coding/ChaiStop-server).
-The entire project is live hosted [https://chai-stop.herokuapp.com/](https://chai-stop.herokuapp.com/). The website is not fully responsive yet. Hence please avoid accessing the website on small screens. You can watch the demo video of the project [here](https://drive.google.com/file/d/1Mf4VL4bycc4LKFekrYYhKHkAq6AseYRh/view?usp=sharing). 
+The entire project is live hosted [https://chai-stop.herokuapp.com/](https://chai-stop.herokuapp.com/). The website is not fully responsive yet. Hence please avoid accessing the website on small screens. You can watch the demo video of the project [here](https://vimeo.com/650750647). 
 
 # Features
 
